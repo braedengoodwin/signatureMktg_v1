@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaAngleLeft } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 export default function Carousel({
   children: slides,
@@ -20,11 +19,14 @@ export default function Carousel({
   };
 
   useEffect(() => {
-    if(!autoSlide) return
+    if (!autoSlide) return;
 
-    const slideInterval = setInterval(nextSlide, autoSlideInterval)
-    return () => clearInterval(slideInterval)
-  }, [])
+    const slideInterval = setInterval(() => {
+      setCurrentPic((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+    }, autoSlideInterval);
+
+    return () => clearInterval(slideInterval);
+  }, [autoSlide, autoSlideInterval, slides.length]);
 
   return (
     <div className="overflow-hidden relative">
@@ -53,10 +55,11 @@ export default function Carousel({
         <div className="flex items-center justify-center gap-2">
           {slides.map((_, i) => (
             <div
+              key={i}
               className={`
-                    transition-all w-3 h-3 bg-white rounded-full
-                    ${currentPic === i ? "p-2" : "bg-opacity-50"}
-                `}
+                transition-all w-3 h-3 bg-white rounded-full
+                ${currentPic === i ? "p-2" : "bg-opacity-50"}
+              `}
             />
           ))}
         </div>
