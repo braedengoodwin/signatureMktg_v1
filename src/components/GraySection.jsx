@@ -50,7 +50,7 @@ export default function GraySection() {
           <img src={handshakeIconIcon} className="mr-2" alt="Handshaking Icons" />
           <p className="text-[10px] max-w-xs text-[#7b7b7b]">
             Our initial calling to these businesses is to develop a lead. See why we are one of the best in customer satisfaction.
-            <div className="flex flex-row mt-2">
+            <div className="flex flex-row mt-7">
               <button className="text-[13px] bg-[#4386fa] rounded-sm p-1 text-white drop-shadow-lg">
                 CONTACT US
               </button>

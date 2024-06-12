@@ -4,13 +4,13 @@ export default function Accordion({ title, answer }) {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="py-2">
+    <div className="w-4/5 border border-black shadow">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex items-center w-full"
+        className="flex items-center w-full p-2 font-bold text-white bg-[#6593d1] "
       >
         <svg
-          className="fill-indigo-500 shrink-0 mr-2"
+          className="fill-current shrink-0 mr-2"
           width="16"
           height="16"
           xmlns="http://www.w3.org/2000/svg"
@@ -37,14 +37,15 @@ export default function Accordion({ title, answer }) {
         <span>{title}</span>
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`overflow-hidden transition-all duration-300 ease-in-out shadow-inner-xl  ${
           accordionOpen ? "h-auto opacity-100" : "h-0 opacity-0"
         }`}
       >
-        {answer.map((answer,index) => (
-            <div key={index} className="ml-8">{answer}</div>
+        {answer.map((item, index) => (
+          <div key={index} className="w-full pl-8 p-2 bg-gray-700 text-white text-sm">
+            {item}
+          </div>
         ))}
-        
       </div>
     </div>
   );

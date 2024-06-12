@@ -1,7 +1,7 @@
 import "./App.css";
 import InformationSection from "./InformationSection";
-import Accordion from "./components/Accordion";
 import Carousel from "./components/Carousel";
+import Footer from "./components/Footer";
 import GraySection from "./components/GraySection";
 import Header from "./components/Header";
 import appointment from "./images/appointment.jpg";
@@ -34,10 +34,8 @@ function App() {
             </Carousel>
           </div>
           <GraySection />
-
-         <InformationSection/>
-
-          
+          <InformationSection />
+          <Footer />
         </div>
       </div>
 

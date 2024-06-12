@@ -34,9 +34,9 @@ export default function InformationSection(){
               questions.
             </p>
 
-            <div class="relative overflow-hidden p-1 bg-white mt-4">
-              <div class="absolute inset-0 bg-diagonal-lines bg-repeat bg-10 opacity-25"></div>
-              <p class="relative z-10 text-gray-700 text-3xl ml-1">
+            <div className="relative overflow-hidden p-1 bg-white mt-4">
+              <div className="absolute inset-0 bg-diagonal-lines bg-repeat bg-10 opacity-25"></div>
+              <p className="relative z-10 text-gray-700 text-3xl ml-1">
                 Signature also offers easy payment options.
               </p>
             </div>
@@ -73,12 +73,16 @@ export default function InformationSection(){
             </p>
           </div>
         </div>
-        <div className=" w-5/12 mt-4 ml-2 mr-2">
-          <div className="p-2 bg-gray-200 ">
+        <div className="w-5/12 mt-8 ml-6 mr-2">
+          <div className="">
             {/* so i can add links to different pages just by adding answer={insert link} */}
-          <Accordion title='do you prefer andriod or ios' answer={['i like to use ios']}/>
-          <Accordion title='do you prefer css or tailwind' answer={['test', 'test2', 'test3']}/>
-          <Accordion title='do you prefer firebase or supabase' answer={['i like to use supabase']}/>
+          <Accordion title='Home' answer={[]}/>
+          <Accordion title='Insurance Services' answer={['Lead Generation', 'Appointment Setting', 'Employee Benefits', 'Program Specifics', 'X-Date and Appt Samples', 'SIC Codes']}/>
+          <Accordion title='Mortgage Services' answer={['Mortgage List Services']}/>
+          <Accordion title='Direct Mail' answer={['Mortgage Mailers', 'Insurance Mailers']}/>
+          <Accordion title='Testimonials' answer={[]}/>
+          <Accordion title='Contact' answer={[]}/>
+          <Accordion title='Signature Select' answer={[]}/>
           </div>
         </div>
       </div>
