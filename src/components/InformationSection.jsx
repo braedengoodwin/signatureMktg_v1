@@ -1,4 +1,4 @@
-import Accordion from "./components/Accordion"
+import Accordion from "./Accordion"
 
 export default function InformationSection(){
     return(
