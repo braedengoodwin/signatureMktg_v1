@@ -2,7 +2,7 @@
 I created this project based off of this website, https://www.signaturemktg.net/index.php/contact-us. I wasn't trying to improve the design or really change it in anyway, I just wanted to practice my HTML and CSS skills and some of my React skills as well.
 
 # Stack
-Mostly HTML, CSS, and some React concepts like react-router and components to allow for more flexibility but I don't think I really used the components like I should have.
+Mostly HTML, CSS, and some React concepts like react-router and components to allow for more flexibility but I don't think I really used the components like I should have and the routing is very messy.
 
 # What I learned
 I need to plan ahead when working on sites. I just kind of started the project with no clear vision besides creating a copy cat website. I should have planned out my routing and components better which I will do in the future. 
