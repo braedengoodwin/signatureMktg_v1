@@ -10,7 +10,6 @@ import { useState } from "react";
 import Modal from "../../components/Modal";
 
 function DateApptSamples() {
-  const [isOpen, setIsOpen] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [secondModalOpen, setSecondModalOpen] = useState(false)
 
@@ -66,7 +65,7 @@ function DateApptSamples() {
             {/* Main Content */}
             <div className="flex">
               <div className="w-7/12 pr-4 relative">
-                <div className="border-r border-gray-300 absolute inset-0 top-6 bottom-6"></div>
+                <div className="border-r border-gray-300 absolute inset-0 top-6 bottom-6 -z-10"></div>
                 <div className="mt-7 ml-12">
                   <div className="relative overflow-hidden p-1 bg-white mt-4">
                     <div className="absolute inset-0 bg-diagonal-lines bg-repeat bg-10 opacity-25"></div>

@@ -2,11 +2,11 @@ import Accordion from "./Accordion"
 
 export default function InformationSection(){
     return(
-        <div className="flex">
-        <div className="w-7/12 pr-4 relative">
-        <div className="border-r border-gray-300 absolute inset-0 top-6 bottom-6"></div>
-          <div className=" mt-7 ml-12 ">
-            <p className=" text-gray-600 text-sm">
+        <div className="flex -z-10">
+        <div className="w-7/12 pr-4 relative ">
+        <div className="border-r border-gray-300 absolute inset-0 top-6 bottom-6 "></div>
+          <div className=" mt-7 ml-12 z-10">
+            <p className=" text-gray-600 text-sm z-10">
               At Signature Marketing our objective is simple. Create a well
               rounded prospecting program to get our clients to the bottom
               line, writing new business. Our goal is to build a long term
@@ -52,7 +52,7 @@ export default function InformationSection(){
               pay up front and wonder about the outcome. You only pay for
               results!{" "}
             </p>
-            <p className="mt-4 text-gray-600 text-sm">
+            <p className="mt-4 text-gray-600 text-sm z-15">
               Let Signature Marketing to handle all of your new business
               insurance prospecting needs. You can contact us by phone or
               e-mail. <b>877-466-8445</b> or{" "}

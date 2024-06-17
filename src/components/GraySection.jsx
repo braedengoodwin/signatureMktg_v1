@@ -6,8 +6,8 @@ import { FaQuoteRight } from "react-icons/fa";
 
 export default function GraySection() {
   return (
-    <div className="h-auto bg-gray-100 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4">
-      <div className="flex-1 sm:ml-10">
+    <div className="h-auto bg-gray-100 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4 -z-10">
+      <div className="flex-1 sm:ml-10 z-10">
         <h2 className="mb-2 text-lg text-gray-700 font-light">
           <span className="underline underline-offset-8">W</span>ho we are
         </h2>
@@ -19,11 +19,11 @@ export default function GraySection() {
         </div>
       </div>
 
-      <div className="flex-1">
+      <div className="flex-1 z-10">
         <h2 className="mb-2 text-lg text-gray-700 font-light">
           <span className="underline underline-offset-8">Te</span>stimonials
         </h2>
-        <div className="flex items-start">
+        <div className="flex items-start z-10">
           <img src={testIcon} className="mr-2" alt="Text Bubbles" />
           <p className="text-[10px] max-w-sm text-[#7b7b7b]">
             <span className="inline-block align-top">

@@ -22,9 +22,25 @@ export default function Header() {
             Insurance Services
           </NavLink>
         </FlyoutLink>
-        <h2 className="text-xs">Mortgage Services</h2>
-        <h2 className="text-xs">Direct Mail</h2>
-        <h2 className="text-xs">Testimonials</h2>
+
+        <FlyoutLink href="" FlyoutContent={MortgageServices}>
+          <NavLink to="/mortgage-marketing-services" className="text-xs">
+          Mortgage Services
+          </NavLink>
+        </FlyoutLink>
+
+        <FlyoutLink href="" FlyoutContent={DirectMailServices}>
+          <NavLink to="/direct-mail-services" className="text-xs">
+          Direct Mail
+          </NavLink>
+        </FlyoutLink>
+
+        <FlyoutLink href="" FlyoutContent={Testimonials}>
+          <NavLink to="/testimonials" className="text-xs">
+          Testimonials
+          </NavLink>
+        </FlyoutLink>
+
         <h2 className="text-xs">Contact</h2>
         <h2 className="text-xs">Signature Select</h2>
       </div>
@@ -80,5 +96,46 @@ const DropdownContent = () => {
 };
 
 const HomeContent = () => {
+  return <span></span>;
+};
+
+const MortgageServices = () => {
+  return(
+    <div className="w-44 bg-[#6593d1] p-2  shadow-xl">
+      <div className="mb-2 space-y-2 pl-3 pt-2">
+        <NavLink
+          to="/mortgage-list"
+          className="block text-xs hover:underline"
+        >
+          Mortgage List Services 
+        </NavLink>
+      </div>
+    </div>
+  )
+}
+
+const DirectMailServices = () => {
+  return(
+    <div className="w-44 bg-[#6593d1] p-2  shadow-xl">
+      <div className="mb-2 space-y-2 pl-3 pt-2">
+        <NavLink
+          to="/mortgage-mailers"
+          className="block text-xs hover:underline"
+        >
+          Mortgage Mailers
+        </NavLink>
+
+        <NavLink
+          to="/insurance-mailers"
+          className="block text-xs hover:underline"
+        >
+          Insurance Mailers
+        </NavLink>
+      </div>
+    </div>
+  )
+}
+
+const Testimonials = () => {
   return <span></span>;
 };

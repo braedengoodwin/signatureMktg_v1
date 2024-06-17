@@ -10,6 +10,12 @@ import EmployeeBenefits from "./pages/insuranceServices/EmployeeBenefits";
 import ProgramSpecifics from "./pages/insuranceServices/ProgramSpecifics";
 import DateApptSamples from "./pages/insuranceServices/XDateApptSamples";
 import SicCodes from "./pages/insuranceServices/SicCodes";
+import MortgageServices from "./pages/mortgageServices/MortgageServices";
+import MortgageListServ from "./pages/mortgageServices/MortgageListServ";
+import DirectMailServices from "./pages/directMail/DirectMailServices";
+import MortgageMailers from "./pages/directMail/MortgageMailers";
+import InsuranceMailers from "./pages/directMail/InsuranceMailers";
+import Testimonials from "./pages/Testimonials";
 
 
 
@@ -27,6 +33,12 @@ const router = createBrowserRouter([
       {path: 'program-specifics' , element: <ProgramSpecifics/>},
       {path: 'x-date-appt-samples' , element: <DateApptSamples/>},
       {path: 'sic-codes' , element: <SicCodes/>},
+      {path: 'mortgage-marketing-services' , element: <MortgageServices/>},
+      {path: 'mortgage-list' , element: <MortgageListServ/>},
+      {path: 'direct-mail-services' , element: <DirectMailServices/>},
+      {path: 'mortgage-mailers' , element: <MortgageMailers/>},
+      {path: 'insurance-mailers' , element: <InsuranceMailers/>},
+      {path: 'testimonials', element: <Testimonials/>}
 
     ]
   }
