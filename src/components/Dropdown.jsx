@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const FlyoutLink = ({ children, href, FlyoutContent }) => {
+const FlyoutLink = ({ children, href, FlyoutContent, box }) => {
   const [open, setOpen] = useState(false);
   const showFlyout = FlyoutContent && open;
 
@@ -18,7 +18,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
             transform: showFlyout ? "scaleX(1)" : "scaleX(0)",
           }}
           className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left
-           rounded-full scale-x-0 bg-indigo-300 transition-transform duration-300 ease-out z-10
+           rounded-full scale-x-0 bg-[#2b5090] transition-transform duration-300 ease-out z-10
         "
         />
       </a>
@@ -36,7 +36,8 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
                 the second one is for the little triangle in the middle of the box
             */}
           <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent z-10" />
-          <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-[#6593d1] z-10" />
+          {box ? <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-[#6593d1] z-10"/> : null}
+          
           <FlyoutContent />
         </motion.div>
       )}

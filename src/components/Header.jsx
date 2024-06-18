@@ -17,19 +17,19 @@ export default function Header() {
           </NavLink>
         </FlyoutLink>
 
-        <FlyoutLink href="" FlyoutContent={DropdownContent}>
+        <FlyoutLink href="" FlyoutContent={DropdownContent} box={true}>
           <NavLink to="/insurance-marketing-services" className="text-xs">
             Insurance Services
           </NavLink>
         </FlyoutLink>
 
-        <FlyoutLink href="" FlyoutContent={MortgageServices}>
+        <FlyoutLink href="" FlyoutContent={MortgageServices} box={true}>
           <NavLink to="/mortgage-marketing-services" className="text-xs">
           Mortgage Services
           </NavLink>
         </FlyoutLink>
 
-        <FlyoutLink href="" FlyoutContent={DirectMailServices}>
+        <FlyoutLink href="" FlyoutContent={DirectMailServices} box={true}>
           <NavLink to="/direct-mail-services" className="text-xs">
           Direct Mail
           </NavLink>
@@ -41,8 +41,18 @@ export default function Header() {
           </NavLink>
         </FlyoutLink>
 
-        <h2 className="text-xs">Contact</h2>
-        <h2 className="text-xs">Signature Select</h2>
+        <FlyoutLink href="" FlyoutContent={Contact}>
+          <NavLink to="/contact" className="text-xs">
+          Contact
+          </NavLink>
+        </FlyoutLink>
+
+        <FlyoutLink href="" FlyoutContent={sigSel}>
+          <NavLink to="/" className="text-xs">
+          Signature Select
+          </NavLink>
+        </FlyoutLink>
+
       </div>
     </header>
   );
@@ -137,5 +147,13 @@ const DirectMailServices = () => {
 }
 
 const Testimonials = () => {
+  return <span></span>;
+};
+
+const Contact = () => {
+  return <span></span>;
+};
+
+const sigSel = () => {
   return <span></span>;
 };

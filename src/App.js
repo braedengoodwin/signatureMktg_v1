@@ -16,6 +16,7 @@ import DirectMailServices from "./pages/directMail/DirectMailServices";
 import MortgageMailers from "./pages/directMail/MortgageMailers";
 import InsuranceMailers from "./pages/directMail/InsuranceMailers";
 import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
 
 
 
@@ -38,8 +39,8 @@ const router = createBrowserRouter([
       {path: 'direct-mail-services' , element: <DirectMailServices/>},
       {path: 'mortgage-mailers' , element: <MortgageMailers/>},
       {path: 'insurance-mailers' , element: <InsuranceMailers/>},
-      {path: 'testimonials', element: <Testimonials/>}
-
+      {path: 'testimonials', element: <Testimonials/>},
+      {path: 'contact', element: <Contact/>}
     ]
   }
 ])
