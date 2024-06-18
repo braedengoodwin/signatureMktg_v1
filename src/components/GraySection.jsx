@@ -3,6 +3,7 @@ import testIcon from "../images/testIcon.png";
 import handshakeIconIcon from "../images/handshakeIcon.png";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function GraySection() {
   return (
@@ -35,7 +36,8 @@ export default function GraySection() {
             </span>
             <div className="flex flex-row mt-2">
               <button className="text-[13px] bg-[#4386fa] rounded-sm p-1 text-white drop-shadow-lg">
-                READ MORE
+                <NavLink to='/testimonials'>READ MORE</NavLink>
+                
               </button>
             </div>
           </p>
@@ -52,7 +54,7 @@ export default function GraySection() {
             Our initial calling to these businesses is to develop a lead. See why we are one of the best in customer satisfaction.
             <div className="flex flex-row mt-7">
               <button className="text-[13px] bg-[#4386fa] rounded-sm p-1 text-white drop-shadow-lg">
-                CONTACT US
+              <NavLink to='/contact'>CONTACT US</NavLink>
               </button>
             </div>
           </p>

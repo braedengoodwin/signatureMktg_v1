@@ -4,22 +4,23 @@ import Accordion from "../../components/Accordion";
 import insuranceMtkServ from "../../images/insuranceMtkServ.jpg";
 import dateApptSamp01 from "../../images/x1s.jpg";
 import dateApptSamp01big from "../../images/x1Big.jpg";
-import xdateSample from '../../images/xdates.jpg'
-import xdateSampleBig from '../../images/xdateBig.jpg'
+import xdateSample from "../../images/xdates.jpg";
+import xdateSampleBig from "../../images/xdateBig.jpg";
 import { useState } from "react";
 import Modal from "../../components/Modal";
+import { NavLink } from "react-router-dom";
 
 function DateApptSamples() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [secondModalOpen, setSecondModalOpen] = useState(false)
+  const [secondModalOpen, setSecondModalOpen] = useState(false);
 
   const handleClick = () => {
     setModalIsOpen(!modalIsOpen);
   };
 
   const handleClickToo = () => {
-    setSecondModalOpen(!secondModalOpen)
-  }
+    setSecondModalOpen(!secondModalOpen);
+  };
 
   return (
     <>
@@ -47,7 +48,7 @@ function DateApptSamples() {
         </div>
       </Modal>
 
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen flex justify-center">
+      <div className="bg-gradient-to-br from-cyan-500 to-blue-500 min-h-screen flex justify-center">
         <div className="w-full max-w-4xl bg-white mt-12 mb-16 mx-4 sm:mx-auto flex flex-col justify-between">
           <div>
             {/* Header */}
@@ -75,7 +76,10 @@ function DateApptSamples() {
                   </div>
                   <h2 className="mb-4 mt-1">Appointment Sample</h2>
                   <div>
-                    <div className="relative cursor-pointer" onClick={handleClick}>
+                    <div
+                      className="relative cursor-pointer"
+                      onClick={handleClick}
+                    >
                       <img
                         src={dateApptSamp01}
                         alt="Small logo"
@@ -86,7 +90,10 @@ function DateApptSamples() {
 
                   <h2 className="mb-4 mt-12">X-Date Sample</h2>
                   <div className="mb-14">
-                    <div className="relative cursor-pointer" onClick={handleClickToo}>
+                    <div
+                      className="relative cursor-pointer"
+                      onClick={handleClickToo}
+                    >
                       <img
                         src={xdateSample}
                         alt="Small logo"
@@ -98,29 +105,61 @@ function DateApptSamples() {
               </div>
               <div className="w-5/12 mt-8 ml-6 mr-2">
                 <div>
-                  <Accordion title="Home" answer={[]} />
+                  <NavLink to="/">
+                    <Accordion title="Home" answer={[]} />
+                  </NavLink>
+
                   <Accordion
                     title="Insurance Services"
                     answer={[
-                      "Lead Generation",
-                      "Appointment Setting",
-                      "Employee Benefits",
-                      "Program Specifics",
-                      "X-Date and Appt Samples",
-                      "SIC Codes",
+                      <NavLink to="/lead-generation">Lead Generation</NavLink>,
+                      <NavLink to="/appointment-setting">
+                        Appointment Setting
+                      </NavLink>,
+                      <NavLink to="/employee-benefits">
+                        Employee Benefits
+                      </NavLink>,
+                      <NavLink to="/program-specifics">
+                        Program Specifics
+                      </NavLink>,
+                      <NavLink to="/x-date-appt-samples">
+                        X-Date and Appt Samples
+                      </NavLink>,
+                      <NavLink to="/sic-codes">SIC Codes</NavLink>,
                     ]}
                   />
                   <Accordion
                     title="Mortgage Services"
-                    answer={["Mortgage List Services"]}
+                    answer={[
+                      <NavLink to="/mortgage-list">
+                        Mortgage List Services
+                      </NavLink>,
+                    ]}
                   />
+
                   <Accordion
                     title="Direct Mail"
-                    answer={["Mortgage Mailers", "Insurance Mailers"]}
+                    answer={[
+                      <NavLink to="/mortgage-mailers">
+                        Mortgage Mailers
+                      </NavLink>,
+                      <NavLink to="/insurance-mailers">
+                        Insurance Mailers
+                      </NavLink>,
+                    ]}
                   />
-                  <Accordion title="Testimonials" answer={[]} />
-                  <Accordion title="Contact" answer={[]} />
-                  <Accordion title="Signature Select" answer={[]} />
+
+                  <NavLink to="/testimonials">
+                    <Accordion title="Testimonials" answer={[]} />
+                  </NavLink>
+
+                  <NavLink to="/contact">
+                    <Accordion title="Contact" answer={[]} />
+                  </NavLink>
+
+                  <NavLink to="/">
+                    <Accordion title="Signature Select" answer={[]} />
+                  </NavLink>
                 </div>
               </div>
             </div>

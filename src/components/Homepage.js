@@ -11,7 +11,7 @@ const slides = [appointment, mailbox, womensFace];
 
 function HomePage() {
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen flex justify-center">
+    <div className="bg-gradient-to-br from-cyan-500 to-blue-500 min-h-screen flex justify-center">
       <div className="w-full max-w-4xl bg-white mt-12 mb-16 mx-4 sm:mx-auto">
         {/* Header */}
         <div className="h-48 border-b">

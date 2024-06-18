@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function Accordion({ title, answer }) {
   const [accordionOpen, setAccordionOpen] = useState(false);
+  console.log(answer.length)
 
   return (
     <div className="w-4/5 border border-black shadow">
@@ -9,6 +10,7 @@ export default function Accordion({ title, answer }) {
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex items-center w-full p-2 font-bold text-white bg-[#6593d1] "
       >
+        {answer.length >0 ?  
         <svg
           className="fill-current shrink-0 mr-2"
           width="16"
@@ -33,7 +35,7 @@ export default function Accordion({ title, answer }) {
               accordionOpen && "!rotate-180"
             }`}
           />
-        </svg>
+        </svg> : <span className="ml-6"></span>}
         <span>{title}</span>
       </button>
       <div
